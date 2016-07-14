@@ -19,7 +19,8 @@
 		;; Add-My-Wire-Action
 		(define (add-my-wire-action! action)
 			(set! 	action-list
-				(cons action action-list)))
+				(cons action action-list))
+			(action))
 
 		;; Execute-Action-List
 		(define (execute-action-list #!optional l)

@@ -1,4 +1,4 @@
-;;	Logic Gates	;;
+;;		Logic Gates		;;
 ;;
 ;;; And Gate
 (define (and-gate w1 w2 out)
@@ -18,10 +18,16 @@
 
 
 
-;;	Logical Functions	;;
+;;	Logical Functions		;;
 ;;
 ;;; Logical AND
 (define	(logical-and n1 n2)
 	(cond	((= n1 0)	0)
 		((= n2 0)	0)
-		(else		1)));
+		(else		1)))
+
+
+;;
+;;		Delay Values		;;
+;;
+(define	AND-GATE-DELAY	300)
