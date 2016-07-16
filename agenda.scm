@@ -1,4 +1,4 @@
-;;		Agenda Management		;;
+;;			Agenda Management			;;
 ;;
 ;;; Agenda, needs a header node
 (define	agenda (list '*agenda*))
@@ -49,7 +49,7 @@
 ;;;
 ;;; Run an agenda
 (define (run-agenda #!optional ag)
-	
+	(define diff (make-talk-diff))
 	(cond	((default-object? ag)	
 			(run-agenda agenda))
 		
@@ -59,9 +59,10 @@
 
 		;; Working
 		(else	
-			;; Update current-time, run the action-list of that time, and cdr down the agenda
+			;; Update current-time, run the action-list of that time, output diff and cdr down the agenda
 			(set! current-time (caadr ag))
 			(run-action-list (cdadr ag))
+			(diff)
 			(run-agenda (cdr ag)))))
 ;;;
 ;;; After Delay
