@@ -28,7 +28,7 @@
 				(execute-action-list action-list)
 				(cond	((null? l)	"Done")
 					(else
-						((car action-list))
+						((car l))
 						(execute-action-list (cdr l))))))
 
 		;; Dispatch for the wire
